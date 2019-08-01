@@ -83,8 +83,6 @@ function createScene() {
     antialias: true // 抗锯齿 
   });
 
-  console.log(renderer)
-
   // 设置画布尺寸
   renderer.setSize(WIDTH, HEIGHT);
    
@@ -123,7 +121,7 @@ function createLights() {
     // 产生动态阴影
     shadowLight.castShadow = true;
  
-    // define the visible area of the projected shadow
+    // 定义阴影产生区域
     shadowLight.shadow.camera.left = -400;
     shadowLight.shadow.camera.right = 400;
     shadowLight.shadow.camera.top = 400;
@@ -131,7 +129,7 @@ function createLights() {
     shadowLight.shadow.camera.near = 1;
     shadowLight.shadow.camera.far = 1000;
  
-    // 光线范围
+    // 阴影范围
     shadowLight.shadow.mapSize.width = 2048;
     shadowLight.shadow.mapSize.height = 2048;
      
@@ -147,7 +145,7 @@ Sea = function(){
   // radius top, radius bottom, height, number of segments on the radius, number of segments vertically
   var geom = new THREE.CylinderGeometry(600,600,800,40,10);
    
-  // rotate the geometry on the x axis
+  // 放平
   geom.applyMatrix(new THREE.Matrix4().makeRotationX(-Math.PI/2));
    
   // create the material 
@@ -171,7 +169,6 @@ var sea;
 
 function createSea(){
   sea = new Sea();
-
   // push it a little bit at the bottom of the scene
   sea.mesh.position.y = -600;
 
@@ -338,7 +335,9 @@ function loop(){
   airplane.propeller.rotation.x += 0.3;
   sea.mesh.rotation.z += .005;
   sky.mesh.rotation.z += .01;
+  camera.position
 
+  // 更新飞机跟随鼠标位置，和螺旋桨的旋转
   updatePlane();
 
   renderer.render(scene, camera);
