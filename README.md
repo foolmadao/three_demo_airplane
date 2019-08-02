@@ -110,3 +110,16 @@ function loop(){
   requestAnimationFrame(loop);
 }
 ```
+
+##  参考
+
+http://www.jq22.com/jquery-info17198
+
+https://techbrood.com/threejs/docs/
+
+## 学习Three的推荐
+
+* 文档的中文翻译 https://techbrood.com/threejs/docs/
+* 英文文档 https://threejs.org/docs/index.html#manual/en/introduction/Creating-a-scene
+* 大量的three案例的博客 https://www.wjceo.com/blog/threejs/
+* 《three.js入门》及其书例代码 http://zhangwenli.com/ThreeExample.js/
