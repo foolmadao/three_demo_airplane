@@ -6,9 +6,9 @@ https://foolmadao.github.io/three_demo_airplane/
 
 <img src="image/plane.png" height="400em" />
 
-## threeJs的三大组建
+## threeJs的三大组件
 
-在Three.js中，要渲染物体到网页中，我们需要3个组建： 
+在Three.js中，要渲染物体到网页中，我们需要3个组件： 
 
 ### 1.场景（scene）
 ```
